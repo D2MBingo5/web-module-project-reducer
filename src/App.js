@@ -6,7 +6,7 @@ import './App.css';
 import TotalDisplay from './components/TotalDisplay';
 import CalcButton from './components/CalcButton';
 
-import { addOne } from './actions'
+import { addOne, applyNumber } from './actions'
 
 function App() {
 
@@ -14,8 +14,12 @@ function App() {
 
   console.log(state)
 
-  const handleAddOne = () => {
-    dispatch(addOne())
+  // const handleAddOne = () => {
+  //   dispatch(addOne())
+  // }
+
+  const handleApplyNumber = () => {
+    dispatch(applyNumber(1))
   }
 
   return (
@@ -41,7 +45,7 @@ function App() {
             </div>
 
             <div className="row">
-              <CalcButton value={1} onClick={handleAddOne}/>
+              <CalcButton value={1} onClick={handleApplyNumber}/>
               <CalcButton value={2}/>
               <CalcButton value={3}/>
             </div>

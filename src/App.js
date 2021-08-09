@@ -19,7 +19,7 @@ function App() {
   // }
 
   const handleApplyNumber = () => {
-    dispatch(applyNumber(1))
+    dispatch(applyNumber(/* CalcButton's value */))
   }
 
   return (
@@ -52,7 +52,7 @@ function App() {
 
             <div className="row">
               <CalcButton value={4}/>
-              <CalcButton value={5}/>
+              <CalcButton value={5} onClick={handleApplyNumber}/>
               <CalcButton value={6}/>
             </div>
 
